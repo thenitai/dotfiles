@@ -1,0 +1,54 @@
+# Development
+alias   hmu="cd /Users/nitai/Documents/repos/helpmonks && node-dev app.js"
+alias   hmuw="cd /Users/nitai/Documents/repos/helpmonks-website && node-dev app.js"
+alias   ru="cd /Users/nitai/Documents/repos/razuna-next && node-dev app.js"
+alias   yu="cd /Users/nitai/Documents/repos/yoda && node-dev app.js"
+
+# Razuna Legacy
+alias	rau="/Users/nitai/Documents/tomcat/bin/startup.sh"
+alias	rad="/Users/nitai/Documents/tomcat/bin/shutdown.sh"
+alias	tailraz="tail -f /Users/nitai/Documents/tomcat/logs/catalina.out"
+
+alias	nod="killall node"
+
+# Servers
+alias   emperor="ssh root@emperor.razuna.com"
+
+# Server Helpmonks
+alias	monk="ssh root@162.243.66.215"
+alias	monkweb="ssh root@helpmonks.com"
+alias	monkdb="ssh root@107.170.85.161"
+alias	monkdiscourse="ssh root@104.131.46.212"
+
+# EPO
+alias	epo="ssh epo@185.49.16.67"
+
+# Useful stuff
+alias	mou="mongod --dbpath ~/mongodb/db &"
+alias	mod="killall mongod"
+alias	elu="elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml &"
+alias	eld="killall java"
+alias	myu="mysql.server start"
+alias	myd="mysql.server stop"
+
+# Flush DNS
+alias	flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;"
+
+# Selenium
+alias   sel="selenium-server -p 4444 -Dwebdriver.chrome.driver=/Users/nitai/.nvm/versions/node/v4.2.2/bin/wdio &"
+
+# Edit this file
+alias	ez="vim ~/.zshrc"
+
+# Source zshrc
+alias   sez="source ~/.zshrc"
+
+# Map vim to nvim
+alias	vim="nvim"
+
+# Shortcut to nvim because I'm lazy
+alias   v="nvim"
+
+#Prevent tragedy
+alias   rm='rm -i'
+
