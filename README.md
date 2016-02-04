@@ -1,5 +1,10 @@
 # Auto configure a new MacOS X system (or update) with dotfiles
 
+## ZSH Shell
+[](https://raw.githubusercontent.com/thenitai/dotfiles/master/images/zsh.png)
+
+## Neovim
+[](https://raw.githubusercontent.com/thenitai/dotfiles/master/images/neovim.png)
 
 
 ## Installation:
