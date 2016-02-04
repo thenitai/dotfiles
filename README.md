@@ -28,5 +28,5 @@ curl --silent https://raw.githubusercontent.com/thenitai/dotfiles/master/install
 
 ## Acknowledgement
 
-This repro was inspired by (Paul Miller's dotfiles)[https://github.com/paulmillr/dotfiles]. However, my dotfiles do not only configure the shell and suggest apps, it actually installs a new MacOS X system completely or updates it.
+This repro was inspired by [Paul Miller's dotfiles](https://github.com/paulmillr/dotfiles). However, my dotfiles do not only configure the shell and suggest apps, it actually installs a new MacOS X system completely or updates it.
 
