@@ -1,6 +1,8 @@
-# Auto configure a new system (or update) with dotfiles
+# Auto configure a new MacOS X system (or update) with dotfiles
 
-Installation is done with simple command:
+
+
+## Installation:
 
 ```
 curl --silent https://raw.githubusercontent.com/thenitai/dotfiles/master/install.sh | sh
@@ -8,17 +10,18 @@ curl --silent https://raw.githubusercontent.com/thenitai/dotfiles/master/install
 
 ## Features
 
-![](https://cloud.githubusercontent.com/assets/574696/3210643/80f11554-eed7-11e3-8c8f-5509bc304fc7.png)
+* Installs or updates the complete system
+* Installs homebrew (brew) and installs a lot of helpful libraries (git, mongodb, mysql, etc.). Additionally, installs multimedia libraries (ImageMagick, ffmpeg, exiftool, etc.)
+* Installs the ZSH shell with oh-my-zsh and configures it with zgen and with lots of plugins for shell heaven
+* Installs Neovim (as a replacement for Vim) and configures it with all you need developer goodies (too many to mention)
+* Installs app with cask (Firefox, Chrome, SublimeText, RoboMongo, etc.)
 
-![](https://cloud.githubusercontent.com/assets/574696/3210642/7ecc9a00-eed7-11e3-9357-27c2a8576f80.png)
+## Requirements
 
-Shell (zsh):
-
-## Building system from scratch (reminder)
-
-* Install XCode & its Command Line Tools.
+* Install XCode & its Command Line Tools before running the script
 
 
 ## Acknowledgement
 
+This repro was inspired by (Paul Miller's dotfiles)[https://github.com/paulmillr/dotfiles]. However, my dotfiles do not only configure the shell and suggest apps, it actually installs a new MacOS X system completely or updates it.
 
