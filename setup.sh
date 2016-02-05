@@ -35,7 +35,7 @@ echo 'Getting Neovim configured...'
 mkdir -p "$HOME/.config"
 
 # Link nvim directory
-link "$dotfiles/nvim" "$HOME/.conf/."
+link "$dotfiles/nvim" "$HOME/.config/."
 
 
 # Install Apps
