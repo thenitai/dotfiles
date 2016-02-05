@@ -47,7 +47,7 @@ alias   sez="source ~/.zshrc"
 alias	vim="nvim"
 
 # Shortcut to nvim because I'm lazy
-alias   v="nvim"
+alias   vi="nvim"
 
 #Prevent tragedy
 alias   rm='rm -i'
