@@ -21,12 +21,14 @@ Plug 'jwhitley/vim-plug'
 " control
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'simnalamburt/vim-mundo'
 Plug 'qpkorr/vim-bufkill'
 Plug 'tpope/vim-vinegar'
 "Plug 'krisajenkins/vim-pipe'
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
 
 " auto complete
 Plug 'Valloric/YouCompleteMe', {'do': 'python2 install.py'}
