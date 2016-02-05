@@ -198,7 +198,8 @@ set ignorecase
 " buffers
 nnoremap <silent><tab> :bnext<CR>
 nnoremap <silent><s-tab> :bprevious<CR>
-nnoremap <silent><leader>bq :BD<CR>
+"nnoremap <silent><leader>bq :BD<CR>
+nnoremap <C-w> :bwipeout<CR>
 nnoremap <silent><leader>bn :enew<CR>
 nnoremap <silent><leader>abq :bufdo bd<CR>
 
@@ -369,8 +370,13 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let g:ctrlp_use_caching = 0
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-noremap <leader>bl :CtrlPBuffer<CR>
-noremap <leader>e :CtrlPMRUFiles<CR>
+" noremap <leader>bl :CtrlPBuffer<CR>
+" Show open files
+noremap <leader>l :CtrlPBuffer<CR>
+" Show history
+noremap <leader>h :CtrlPMRUFiles<CR>
+" Show tags
+noremap <leader>t :CtrlPTag<CR>
 "let g:ctrlp_map = '<leader>e'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
