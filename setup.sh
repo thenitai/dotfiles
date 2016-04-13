@@ -80,4 +80,6 @@ link() {
   ln -s "$from" "$to"
 }
 
+# For Sublime
+link "$dotfiles/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 

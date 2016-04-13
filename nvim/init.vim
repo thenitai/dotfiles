@@ -487,3 +487,8 @@ let g:necoghc_enable_detailed_browse = 1
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
+" Change Conceal Behaviour (I like to show quotes around stuff just like text)
+let g:indentLine_noConcealCursor=""
+let g:indentLine_concealcursor = 'vc'
+let g:indentLine_conceallevel = 0
+

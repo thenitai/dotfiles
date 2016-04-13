@@ -43,12 +43,15 @@ alias	ez="vim ~/.zshrc"
 # Source zshrc
 alias   sez="source ~/.zshrc"
 
-# Map vim to nvim
-alias	vim="nvim"
-
 # Shortcut to nvim because I'm lazy
 alias   vi="nvim"
+alias	vim="nvim"
+alias	v="nvim"
 
 #Prevent tragedy
 alias   rm='rm -i'
+
+# NPM
+alias   npmo='npm outdated'
+alias   npmu='npm update'
 

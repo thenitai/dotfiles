@@ -191,24 +191,18 @@ fi
 
 # AUTO SUGGEST PLUGIN
 
-## Add history-substring-search-* widgets to list of widgets that clear the autosuggestion
-#ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
-##
-### Remove *-line-or-history widgets from list of widgets that clear the autosuggestion to avoid conflict with history-substring-search-* widgets
-#ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
+# Remove *-line-or-history widgets from list of widgets that clear the autosuggestion to avoid conflict with history-substring-search-* widgets
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
+
+# Add history-substring-search-* widgets to list of widgets that clear the autosuggestion
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
+
 ##
 #bindkey '^T' autosuggest-toggle
 ##
 #AUTOSUGGESTION_ACCEPT_RIGHT_ARROW=1
 #AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=3'
-##ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg-6'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg-6'
 ##
-##autosuggest_start
-#
-## Enable autosuggestions automatically
-## Load this after the zgen configuration
-#zle-line-init() {
-#    zle autosuggest-start
-#}
-#zle -N zle-line-init
+#autosuggest_start
 
