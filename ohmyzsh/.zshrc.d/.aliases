@@ -27,7 +27,7 @@ alias	epo="ssh epo@185.49.16.67"
 alias	mou="mongod --dbpath ~/mongodb/db &"
 alias	mod="killall mongod"
 alias	elu="elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml &"
-alias	eld="killall java"
+alias	noj="killall java"
 alias	myu="mysql.server start"
 alias	myd="mysql.server stop"
 
