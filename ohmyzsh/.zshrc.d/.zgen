@@ -15,9 +15,9 @@ zgen oh-my-zsh
 # Fish-like fast/unobtrusive autosuggestions for zsh.
 # It suggests commands as you type, based on command history.
 # autosuggestions should be loaded last
-#zgen load tarruda/zsh-autosuggestions
+zgen load tarruda/zsh-autosuggestions
 #zgen load ~/.zsh/zsh-autosuggestions/dist/autosuggestions.zsh
-zgen load ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+#zgen load ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # If zsh-syntax-highlighting is bundled after zsh-history-substring-search,
 # they break, so get the order right.
