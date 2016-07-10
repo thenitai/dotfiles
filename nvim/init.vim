@@ -31,12 +31,17 @@ Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 
 " auto complete
-Plug 'Valloric/YouCompleteMe', {'do': 'python2 install.py'}
+" Plug 'Valloric/YouCompleteMe', {'do': 'python3 install.py'}
 Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 Plug 'scrooloose/syntastic'
 Plug 'jiangmiao/auto-pairs'
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips', {'do': 'python3 install.py'}
 Plug 'honza/vim-snippets'
+
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 " editor
 Plug 'scrooloose/nerdcommenter'

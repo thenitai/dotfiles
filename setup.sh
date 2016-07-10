@@ -9,6 +9,9 @@ else
   exit 1
 fi
 
+# Run xcode-select --install
+xcode-select --install
+
 # Install homebrew
 which -s brew
 if [[ $? != 0 ]]; then
