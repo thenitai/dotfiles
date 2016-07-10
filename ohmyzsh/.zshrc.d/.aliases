@@ -3,6 +3,7 @@ alias   hmu="cd /Users/nitai/Documents/repos/helpmonks && node-dev app.js"
 alias   hmuw="cd /Users/nitai/Documents/repos/helpmonks-website && node-dev app.js"
 alias   ru="cd /Users/nitai/Documents/repos/razuna-next && node-dev app.js"
 alias   yu="cd /Users/nitai/Documents/repos/yoda && node-dev app.js"
+alias	hmp="cd /Users/nitai/Documents/repos/helpmonks && node _run_tests.js -p"
 
 # Razuna Legacy
 alias	rau="/Users/nitai/Documents/tomcat/bin/startup.sh"
@@ -15,10 +16,13 @@ alias	nod="killall node"
 alias   emperor="ssh root@emperor.razuna.com"
 
 # Server Helpmonks
-alias	monk="ssh root@162.243.66.215"
+alias	monk1="ssh root@162.243.66.215"
+alias	monk2="ssh root@162.243.254.157"
+alias	monk3="ssh root@107.170.18.143"
 alias	monkweb="ssh root@helpmonks.com"
 alias	monkdb="ssh root@107.170.85.161"
 alias	monkdiscourse="ssh root@104.131.46.212"
+alias	monklb1="ssh root@162.243.48.170"
 
 # EPO
 alias	epo="ssh epo@185.49.16.67"
@@ -44,14 +48,14 @@ alias	ez="vim ~/.zshrc"
 alias   sez="source ~/.zshrc"
 
 # Shortcut to nvim because I'm lazy
-alias   vi="nvim"
-alias	vim="nvim"
-alias	v="nvim"
+#alias   vi="nvim"
+#alias	vim="nvim"
+#alias	v="nvim"
 
 #Prevent tragedy
-alias   rm='rm -i'
+alias   rm="rm -i"
 
 # NPM
-alias   npmo='npm outdated'
-alias   npmu='npm update'
+alias   npmo="npm outdated"
+alias   npmu="npm update"
 
