@@ -19,47 +19,47 @@ call plug#begin(s:bundle_home)
 Plug 'jwhitley/vim-plug'
 
 " control
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 Plug 'simnalamburt/vim-mundo'
-Plug 'qpkorr/vim-bufkill'
-Plug 'tpope/vim-vinegar'
-"Plug 'krisajenkins/vim-pipe'
+" Plug 'qpkorr/vim-bufkill'
+" Plug 'tpope/vim-vinegar'
+" Plug 'krisajenkins/vim-pipe'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 
 " auto complete
 Plug 'Valloric/YouCompleteMe', {'do': 'python2 install.py'}
-Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
+" Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 Plug 'scrooloose/syntastic'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 " Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " editor
 Plug 'scrooloose/nerdcommenter'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'junegunn/vim-easy-align'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-indent'
-Plug 'vim-scripts/Smart-Tabs'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'Yggdroot/indentLine'
-Plug 'djoshea/vim-autoread'
-Plug 'tmhedberg/matchit'
-Plug 'osyo-manga/vim-over'
 Plug 'hlissner/vim-multiedit'
+Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-repeat'
+" Plug 'junegunn/vim-easy-align'
+" Plug 'kana/vim-textobj-user'
+" Plug 'kana/vim-textobj-indent'
+" Plug 'vim-scripts/Smart-Tabs'
+" Plug 'ntpeters/vim-better-whitespace'
+" Plug 'Yggdroot/indentLine'
+" Plug 'djoshea/vim-autoread'
+" Plug 'tmhedberg/matchit'
+" Plug 'osyo-manga/vim-over'
+" Plug 'hlissner/vim-multiedit'
 Plug 'sjl/gundo.vim'
 
 " csv
-Plug 'chrisbra/csv.vim'
+" Plug 'chrisbra/csv.vim'
 
 " hex
-Plug 'fidian/hexmode'
+"" Plug 'fidian/hexmode'
 
 " nodejs
 Plug 'moll/vim-node'
@@ -86,14 +86,14 @@ Plug 'gabrielelana/vim-markdown'
 
 " git
 Plug 'tpope/vim-fugitive'
-Plug 'gregsexton/gitv'
+" Plug 'gregsexton/gitv'
 Plug 'renyard/vim-git-flow-format'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'airblade/vim-gitgutter'
-Plug 'jreybert/vimagit', { 'branch': 'next' }
+" Plug 'airblade/vim-gitgutter'
+" Plug 'jreybert/vimagit', { 'branch': 'next' }
 
 " rest tool
-Plug 'diepm/vim-rest-console'
+" Plug 'diepm/vim-rest-console'
 
 " search
 Plug 'haya14busa/incsearch.vim'
@@ -101,8 +101,8 @@ Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'dyng/ctrlsf.vim'
-Plug 'rking/ag.vim'
-Plug 'gabesoft/vim-ags'
+" Plug 'rking/ag.vim'
+" Plug 'gabesoft/vim-ags'
 
 " theme
 Plug 'altercation/vim-colors-solarized'
@@ -123,7 +123,7 @@ set fileencoding=utf-8
 set fileencodings=utf-8
 
 " map control keys
-let mapleader=','
+" let mapleader=','
 nnoremap ; :
 
 " fix backspace indent
@@ -160,7 +160,7 @@ syntax on
 set t_Co=256
 
 " hightlight current line
-set cursorline
+" set cursorline
 
 " better scrolling
 set ttyfast
@@ -198,7 +198,7 @@ set ignorecase
 " buffers
 nnoremap <silent><tab> :bnext<CR>
 nnoremap <silent><s-tab> :bprevious<CR>
-"nnoremap <silent><leader>bq :BD<CR>
+" nnoremap <silent><leader>bq :BD<CR>
 nnoremap <C-w> :bwipeout<CR>
 nnoremap <silent><leader>bn :enew<CR>
 nnoremap <silent><leader>abq :bufdo bd<CR>
@@ -370,7 +370,7 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let g:ctrlp_use_caching = 0
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-" noremap <leader>bl :CtrlPBuffer<CR>
+noremap <leader>bl :CtrlPBuffer<CR>
 " Show open files
 noremap <leader>l :CtrlPBuffer<CR>
 " Show history
@@ -492,3 +492,11 @@ let g:indentLine_noConcealCursor=""
 let g:indentLine_concealcursor = 'vc'
 let g:indentLine_conceallevel = 0
 
+
+" For speed
+let loaded_matchparen=1 " Don't load matchit.vim (paren/bracket matching)
+set noshowmatch         " Don't match parentheses/brackets
+set nocursorline        " Don't paint cursor line
+set nocursorcolumn      " Don't paint cursor column
+set scrolljump=8        " Scroll 8 lines at a time at bottom/top
+let html_no_rendering=1 " Don't render italic, bold, links in HTML
