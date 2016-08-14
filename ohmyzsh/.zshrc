@@ -55,7 +55,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(brew git git-extras node npm github git-flow sublime vagrant copydir copyfile docker ubuntu command-not-found sudo taskwarrior web-search wd history-substring-search)
+#plugins=(brew git git-extras node npm github git-flow sublime vim copydir copyfile docker command-not-found sudo wd history-substring-search)
 
 # User configuration
 
@@ -169,7 +169,7 @@ dedupe_path() {
   export PATH=${(j+:+)result}
 }
 
-dedupe_path
+# dedupe_path
 
 # NVM
 export NVM_DIR="/Users/nitai/.nvm"
@@ -181,7 +181,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # ULIMIT
-ulimit -n 2048
+ulimit -n 4096
 
 # Load Aliases
 
@@ -206,3 +206,26 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg-6'
 ##
 #autosuggest_start
 
+export HOMEBREW_GITHUB_API_TOKEN="c338ee6aa0615f1f77b1cb62d41c5bae2732a5a7"
+
+# No loading of NVM anymore for every shell. Use thse instead
+#nvm() {
+#    unset -f nvm
+#    export NVM_DIR=~/.nvm
+#    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#    nvm "$@"
+#}
+#
+#node() {
+#    unset -f node
+#    export NVM_DIR=~/.nvm
+#    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#    node "$@"
+#}
+#
+#npm() {
+#    unset -f npm
+#    export NVM_DIR=~/.nvm
+#    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#    npm "$@"
+#}
