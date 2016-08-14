@@ -22,21 +22,21 @@ Plug 'jwhitley/vim-plug'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'simnalamburt/vim-mundo'
-Plug 'qpkorr/vim-bufkill'
-Plug 'tpope/vim-vinegar'
+"Plug 'majutsushi/tagbar'
+"Plug 'simnalamburt/vim-mundo'
+"Plug 'qpkorr/vim-bufkill'
+"Plug 'tpope/vim-vinegar'
 "Plug 'krisajenkins/vim-pipe'
-Plug 'xolox/vim-easytags'
-Plug 'xolox/vim-misc'
+"Plug 'xolox/vim-easytags'
+"Plug 'xolox/vim-misc'
 
 " auto complete
-" Plug 'Valloric/YouCompleteMe', {'do': 'python3 install.py'}
-Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
-Plug 'scrooloose/syntastic'
-Plug 'jiangmiao/auto-pairs'
-Plug 'SirVer/ultisnips', {'do': 'python3 install.py'}
-Plug 'honza/vim-snippets'
+"Plug 'Valloric/YouCompleteMe', {'do': 'python3 install.py'}
+"Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
+"Plug 'scrooloose/syntastic'
+"Plug 'jiangmiao/auto-pairs'
+"Plug 'SirVer/ultisnips', {'do': 'python3 install.py'}
+"Plug 'honza/vim-snippets'
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -44,31 +44,31 @@ endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 " editor
-Plug 'scrooloose/nerdcommenter'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'junegunn/vim-easy-align'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-indent'
-Plug 'vim-scripts/Smart-Tabs'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'Yggdroot/indentLine'
-Plug 'djoshea/vim-autoread'
-Plug 'tmhedberg/matchit'
-Plug 'osyo-manga/vim-over'
-Plug 'hlissner/vim-multiedit'
-Plug 'sjl/gundo.vim'
+"Plug 'scrooloose/nerdcommenter'
+"Plug 'terryma/vim-multiple-cursors'
+"Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-repeat'
+"Plug 'junegunn/vim-easy-align'
+"Plug 'kana/vim-textobj-user'
+"Plug 'kana/vim-textobj-indent'
+"Plug 'vim-scripts/Smart-Tabs'
+"Plug 'ntpeters/vim-better-whitespace'
+"Plug 'Yggdroot/indentLine'
+"Plug 'djoshea/vim-autoread'
+"Plug 'tmhedberg/matchit'
+"Plug 'osyo-manga/vim-over'
+"Plug 'hlissner/vim-multiedit'
+"Plug 'sjl/gundo.vim'
 
 " csv
-Plug 'chrisbra/csv.vim'
+"Plug 'chrisbra/csv.vim'
 
 " hex
-Plug 'fidian/hexmode'
+"Plug 'fidian/hexmode'
 
 " nodejs
 Plug 'moll/vim-node'
-Plug 'sidorares/node-vim-debugger'
+"Plug 'sidorares/node-vim-debugger'
 
 " jade
 Plug 'digitaltoad/vim-jade'
@@ -98,16 +98,16 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jreybert/vimagit', { 'branch': 'next' }
 
 " rest tool
-Plug 'diepm/vim-rest-console'
+"Plug 'diepm/vim-rest-console'
 
 " search
-Plug 'haya14busa/incsearch.vim'
-Plug 'haya14busa/incsearch-fuzzy.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'haya14busa/incsearch-easymotion.vim'
-Plug 'dyng/ctrlsf.vim'
-Plug 'rking/ag.vim'
-Plug 'gabesoft/vim-ags'
+"Plug 'haya14busa/incsearch.vim'
+"Plug 'haya14busa/incsearch-fuzzy.vim'
+"Plug 'easymotion/vim-easymotion'
+"Plug 'haya14busa/incsearch-easymotion.vim'
+"Plug 'dyng/ctrlsf.vim'
+"Plug 'rking/ag.vim'
+"Plug 'gabesoft/vim-ags'
 
 " theme
 Plug 'altercation/vim-colors-solarized'
