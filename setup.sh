@@ -24,12 +24,15 @@ echo 'Installing Homebrew...'
   brew tap caskroom/cask
 
 # Installing ZSH
-echo 'Installing ZSH Shell...'
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#echo 'Installing ZSH Shell...'
+#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#Install fish
+brew install fish
 
 # Link ZSH config
-link "$dotfiles/ohmyzsh/.zshrc" "$HOME/."
-link "$dotfiles/ohmyzsh/.zshrc.d" "$HOME/."
+#link "$dotfiles/ohmyzsh/.zshrc" "$HOME/."
+#link "$dotfiles/ohmyzsh/.zshrc.d" "$HOME/."
 
 # NEOVIM
 echo 'Getting Neovim configured...'
@@ -65,11 +68,12 @@ brew cask install vlc
 brew cask install eoom
 brew cask install sourcetree
 brew cask install slack
+brew cask install launchrocket
 
 echo 'All done. Switching to ZSH...'
 
 # All done. Switch shell
-chsh -s /bin/zsh
+#chsh -s /bin/zsh
 
 # Function that does the symbolic links
 link() {
