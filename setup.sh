@@ -18,7 +18,7 @@ if [[ $? != 0 ]]; then
 echo 'Installing Homebrew...'
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update
-  brew install git htop mysql nginx grc ctags the_silver_searcher python selenium-server-standalone elasticsearch mongodb ghostscript libtiff exiftool MP4Box ufraw dcraw neovim/neovim/neovim
+  brew install git nodejs htop mysql nginx grc ctags the_silver_searcher python selenium-server-standalone elasticsearch mongodb ghostscript libtiff exiftool MP4Box ufraw dcraw neovim/neovim/neovim
   brew install imagemagick --with-libtiff
   brew install ffmpeg --use-clang --with-libvorbis --with-libvpx --use-gcc  --with-libx264 --with-flac --with-theorao
   brew tap caskroom/cask
@@ -47,12 +47,9 @@ brew cask install google-chrome
 brew cask install sublime-text
 brew cask install atom
 brew cask install firefox
-brew cask install robomongo
-brew cask install mongochef
 brew cask install flux
 brew cask install iterm2
 brew cask install launchbar
-brew cask install little-snitch
 brew cask install livechat
 brew cask install mailplane
 brew cask install moom
