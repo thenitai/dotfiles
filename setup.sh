@@ -46,11 +46,11 @@ link "$dotfiles/nvim" "$HOME/.config/."
 
 # Install Apps
 echo 'Installing Apps...'
+brew cask install firefox
+brew cask install firefox-esr
 brew cask install google-chrome
 brew cask install sublime-text
 brew cask install atom
-brew cask install firefox
-brew cask install flux
 brew cask install iterm2
 brew cask install launchbar
 brew cask install livechat
@@ -59,18 +59,17 @@ brew cask install moom
 brew cask install noizio
 brew cask install nvalt
 brew cask install sequel-pro
-brew cask install skitch
+brew cask install snagit
 brew cask install textexpander
 brew cask install transmission
 brew cask install transmit
 brew cask install viscosity
 brew cask install vlc
-brew cask install eoom
 brew cask install sourcetree
 brew cask install slack
 brew cask install launchrocket
 
-echo 'All done. Switching to ZSH...'
+echo 'All done. Switching to shell...'
 
 # All done. Switch shell
 #chsh -s /bin/zsh
