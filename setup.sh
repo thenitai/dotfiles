@@ -75,6 +75,12 @@ echo 'All done. Switching to ZSH...'
 # All done. Switch shell
 #chsh -s /bin/zsh
 
+# Need to append fish shell to default shells
+sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
+
+# All done. Switch shell
+chsh -s /usr/local/bin/fish
+
 # Function that does the symbolic links
 link() {
   from="$1"
@@ -83,7 +89,3 @@ link() {
   rm -f "$to"
   ln -s "$from" "$to"
 }
-
-# For Sublime
-link "$dotfiles/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-
