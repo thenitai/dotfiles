@@ -15,13 +15,15 @@ xcode-select --install
 # Install homebrew
 which -s brew
 if [[ $? != 0 ]]; then
-echo 'Installing Homebrew...'
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew update
-  brew install git nodejs htop mysql python selenium-server-standalone elasticsearch mongodb ghostscript libtiff exiftool MP4Box ufraw dcraw redis memcached java8
-  brew install imagemagick --with-libtiff
-  brew install ffmpeg --use-clang --with-libvorbis --with-libvpx --use-gcc  --with-libx264 --with-flac --with-theorao
-  brew tap caskroom/cask
+  echo 'Installing Homebrew...'
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew update
+brew install git nodejs htop mysql@5.7 python selenium-server-standalone elasticsearch@5.6 mongodb ghostscript libtiff exiftool MP4Box ufraw dcraw redis memcached tomcat-native
+brew install imagemagick@6 --with-libtiff
+brew install ffmpeg --use-clang --with-libvorbis --with-libvpx --use-gcc  --with-libx264 --with-flac --with-theorao
+brew tap caskroom/cask
+brew install homebrew/cask-versions/java8
 
 # Installing ZSH
 echo 'Installing ZSH Shell...'
@@ -43,6 +45,7 @@ link "$dotfiles/ohmyzsh/.zshrc.d" "$HOME/."
 # Link nvim directory
 #link "$dotfiles/nvim" "$HOME/.config/."
 
+brew install zsh-autosuggestions
 
 # Install Apps
 echo 'Installing Apps...'
