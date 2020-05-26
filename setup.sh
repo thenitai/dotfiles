@@ -13,17 +13,20 @@ fi
 xcode-select --install
 
 # Install homebrew
-which -s brew
+which brew
 if [[ $? != 0 ]]; then
   echo 'Installing Homebrew...'
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
 
 brew update
-brew install git nodejs htop mysql python selenium-server-standalone elasticsearch@6 mongodb ghostscript libtiff exiftool MP4Box ufraw dcraw redis memcached tomcat-native
-brew install imagemagick@6 --with-libtiff
-brew install ffmpeg --use-clang --with-libvorbis --with-libvpx --use-gcc  --with-libx264 --with-flac --with-theorao
-brew tap caskroom/cask
+brew install git nodejs htop mysql python selenium-server-standalone elasticsearch ghostscript libtiff exiftool MP4Box ufraw dcraw redis memcached tomcat-native
+brew install imagemagick@6
+brew install ffmpeg --with-libvorbis --with-libvpx --use-gcc  --with-libx264 --with-flac --with-theorao
+brew tap homebrew/cask-cask
 brew install homebrew/cask-versions/java11
+brew tap mongodb/brew
+brew install mongodb-community@4.2
 
 # Installing ZSH
 echo 'Installing ZSH Shell...'
@@ -50,8 +53,9 @@ brew install fish
 # Install Apps
 echo 'Installing Apps...'
 brew cask install firefox
-brew cask install firefox-esr
+brew cask install firefox-developer-edition
 brew cask install google-chrome
+brew cask install google-chrome-canary
 brew cask install vivaldi
 brew cask install safari-technology-preview
 brew cask install sublime-text
@@ -91,6 +95,10 @@ brew cask install postman
 #brew cask install whatsapp
 brew cask install zoom
 brew cask install simplenote
+
+cd $HOME/repos
+git clone https://github.com/powerline/fonts.git --depth=1
+./install.sh
 
 echo 'All done. Switching to shell...'
 
