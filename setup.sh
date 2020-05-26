@@ -27,6 +27,7 @@ brew tap homebrew/cask-cask
 brew install homebrew/cask-versions/java11
 brew tap mongodb/brew
 brew install mongodb-community@4.2
+brew install fzy
 
 # Installing ZSH
 echo 'Installing ZSH Shell...'
@@ -96,6 +97,7 @@ brew cask install postman
 brew cask install zoom
 brew cask install simplenote
 
+
 cd $HOME/repos
 git clone https://github.com/powerline/fonts.git --depth=1
 ./install.sh
@@ -110,6 +112,16 @@ sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
 
 # All done. Switch shell
 chsh -s /usr/local/bin/fish
+
+# Fish stuff
+
+# oh-my-fish
+curl -L https://get.oh-my.fish | fish
+# enhancd
+omf install https://github.com/b4b4r07/enhancd
+# Bobthefish
+omf install bobthefish
+
 
 # Function that does the symbolic links
 link() {
