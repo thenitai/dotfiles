@@ -23,7 +23,7 @@ brew update
 brew install git htop mysql python selenium-server-standalone elasticsearch ghostscript libtiff exiftool MP4Box ufraw dcraw redis memcached tomcat-native
 brew install imagemagick@6
 brew install ffmpeg --with-libvorbis --with-libvpx --use-gcc  --with-libx264 --with-flac --with-theorao
-brew tap homebrew/cask-cask
+# brew tap homebrew/cask-cask
 brew install homebrew/cask-versions/java11
 brew tap mongodb/brew
 brew install mongodb-community@4.2
@@ -113,6 +113,8 @@ echo 'Install apps from the App Store...'
 mas install 1278508951
 # Todoist
 mas install 585829637
+# The Clock 
+mas install 488764545
 # Word
 mas install 462054704
 # Excel
@@ -143,15 +145,12 @@ if [[ -d "$linuxstuff" ]]; then
   mkdir -p "$HOME/.ssh"
   ln -s "$linuxstuff/id_rsa" "$HOME/.ssh/id_rsa"
   ln -s "$linuxstuff/id_rsa.pub" "$HOME/.ssh/id_rsa.pub"
-  ln -s "$linuxstuff/config.fish" "$HOME/.config/fish/config.fish"
+  ln -s "$linuxstuff/macos_config.fish" "$HOME/.config/fish/config.fish"
 fi
 
 # All done. Switch shell
 echo 'Switching default shell to Fish...'
 chsh -s /usr/local/bin/fish
-
-# Fish stuff
-fish
 
 echo 'Installing Fish stuff...'
 # oh-my-fish
