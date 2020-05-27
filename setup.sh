@@ -143,24 +143,12 @@ sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
 linuxstuff = "$HOME/repos/linux-stuff"
 if [[ -d "$linuxstuff" ]]; then
   mkdir -p "$HOME/.ssh"
+  rm -f "$HOME/.ssh/id_rsa*"
+  rm -f "$HOME/.config/fish/config.fish"
   ln -s "$linuxstuff/id_rsa" "$HOME/.ssh/id_rsa"
   ln -s "$linuxstuff/id_rsa.pub" "$HOME/.ssh/id_rsa.pub"
   ln -s "$linuxstuff/macos_config.fish" "$HOME/.config/fish/config.fish"
 fi
-
-# All done. Switch shell
-echo 'Switching default shell to Fish...'
-chsh -s /usr/local/bin/fish
-
-echo 'Installing Fish stuff...'
-# oh-my-fish
-curl -L https://get.oh-my.fish | fish
-# enhancd
-omf install https://github.com/b4b4r07/enhancd
-# Bobthefish
-omf install bobthefish
-# Bass
-omf install bass
 
 oned = "$HOME/OneDrive"
 if [[ -d "$oned" ]]; then
@@ -172,6 +160,23 @@ if [[ -d "$oned" ]]; then
   ln -s "$oned/Pictures/Wallpaper" "$HOME/Pictures/."
   ln -s "$oned/Pictures/Camera Roll" "$HOME/Pictures/."
 fi
+
+# All done. Switch shell
+echo 'Switching default shell to Fish...'
+chsh -s /usr/local/bin/fish
+
+echo 'Installing Fish stuff...'
+
+fish <<'END_FISH'
+  # oh-my-fish
+  curl -L https://get.oh-my.fish | fish
+  # enhancd
+  omf install https://github.com/b4b4r07/enhancd
+  # Bobthefish
+  omf install bobthefish
+  # Bass
+  omf install bass
+END_FISH
 
 # Function that does the symbolic links
 link() {
