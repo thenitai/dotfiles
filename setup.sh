@@ -28,6 +28,7 @@ brew install homebrew/cask-versions/java11
 brew tap mongodb/brew
 brew install mongodb-community@4.2
 brew install fzy
+brew install mas
 
 # Install NVM
 echo 'Installing NVM...'
@@ -107,11 +108,29 @@ brew cask install zoomus
 brew cask install simplenote
 
 
+echo 'Install apps from the App Store...'
+# Trello
+mas install 1278508951
+# Todoist
+mas install 585829637
+# Word
+mas install 462054704
+# Excel
+mas install 462058435
+# Powerpoint
+mas install 462062816
+# Pages
+mas install 409201541
+# Keynote
+mas install 409183694
+# Numbers
+mas install 409203825
+
+# Powerline Fonts
 cd $HOME/repos
 git clone https://github.com/powerline/fonts.git --depth=1
 ./install.sh
 
-echo 'All done. Switching to shell...'
 
 # All done. Switch shell
 # chsh -s /bin/zsh
@@ -120,7 +139,6 @@ echo 'All done. Switching to shell...'
 sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
 
 linuxstuff = "$HOME/repos/linux-stuff"
-
 if [[ -d "$linuxstuff" ]]; then
   mkdir -p "$HOME/.ssh"
   ln -s "$linuxstuff/id_rsa" "$HOME/.ssh/id_rsa"
@@ -129,11 +147,13 @@ if [[ -d "$linuxstuff" ]]; then
 fi
 
 # All done. Switch shell
+echo 'Switching default shell to Fish...'
 chsh -s /usr/local/bin/fish
 
 # Fish stuff
 fish
 
+echo 'Installing Fish stuff...'
 # oh-my-fish
 curl -L https://get.oh-my.fish | fish
 # enhancd
