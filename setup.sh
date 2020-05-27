@@ -20,7 +20,7 @@ if [[ $? != 0 ]]; then
 fi
 
 brew update
-brew install git nodejs htop mysql python selenium-server-standalone elasticsearch ghostscript libtiff exiftool MP4Box ufraw dcraw redis memcached tomcat-native
+brew install git htop mysql python selenium-server-standalone elasticsearch ghostscript libtiff exiftool MP4Box ufraw dcraw redis memcached tomcat-native
 brew install imagemagick@6
 brew install ffmpeg --with-libvorbis --with-libvpx --use-gcc  --with-libx264 --with-flac --with-theorao
 brew tap homebrew/cask-cask
@@ -29,11 +29,21 @@ brew tap mongodb/brew
 brew install mongodb-community@4.2
 brew install fzy
 
+# Install NVM
+echo 'Installing NVM...'
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+echo 'Installing Node...'
+nvm install 12
+
 # Installing ZSH
-echo 'Installing ZSH Shell...'
+# echo 'Installing ZSH Shell...'
 #sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+#brew install zsh-autosuggestions
+
 #Install fish
+echo 'Installing FISH Shell...'
 brew install fish
 
 # Link ZSH config
@@ -49,7 +59,6 @@ brew install fish
 # Link nvim directory
 #link "$dotfiles/nvim" "$HOME/.config/."
 
-#brew install zsh-autosuggestions
 
 # Install Apps
 echo 'Installing Apps...'
@@ -63,7 +72,7 @@ brew cask install sublime-text
 brew cask install visual-studio-code
 brew cask install iterm2
 #brew cask install launchbar
-brew cask install Alfred
+brew cask install alfred
 brew cask install mailplane
 brew cask install moom
 brew cask install sequel-pro
@@ -75,7 +84,7 @@ brew cask install vlc
 brew cask install sourcetree
 brew cask install gitkraken
 brew cask install telegram
-brew cask install the-clock
+# brew cask install the-clock
 brew cask install onedrive
 brew cask install Spotify
 brew cask install homebrew/cask-drivers/sonos
@@ -88,13 +97,13 @@ brew cask install little-snitch
 brew cask install boom-3d
 #brew cask install default-folder-x
 brew cask install beyond-compare
-brew cask install dash
+brew cask install dash4
 brew cask install expressvpn
 #brew cask install focusatwill
 brew cask install grammarly
 brew cask install postman
 #brew cask install whatsapp
-brew cask install zoom
+brew cask install zoomus
 brew cask install simplenote
 
 
@@ -110,10 +119,20 @@ echo 'All done. Switching to shell...'
 # Need to append fish shell to default shells
 sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
 
+linuxstuff = "$HOME/repos/linux-stuff"
+
+if [[ -d "$linuxstuff" ]]; then
+  mkdir -p "$HOME/.ssh"
+  ln -s "$linuxstuff/id_rsa" "$HOME/.ssh/id_rsa"
+  ln -s "$linuxstuff/id_rsa.pub" "$HOME/.ssh/id_rsa.pub"
+  ln -s "$linuxstuff/config.fish" "$HOME/.config/fish/config.fish"
+fi
+
 # All done. Switch shell
 chsh -s /usr/local/bin/fish
 
 # Fish stuff
+fish
 
 # oh-my-fish
 curl -L https://get.oh-my.fish | fish
@@ -121,7 +140,19 @@ curl -L https://get.oh-my.fish | fish
 omf install https://github.com/b4b4r07/enhancd
 # Bobthefish
 omf install bobthefish
+# Bass
+omf install bass
 
+oned = "$HOME/OneDrive"
+if [[ -d "$oned" ]]; then
+  sudo rm -rf "$HOME/Documents"
+  sudo rm -rf "$HOME/Downloads"
+  ln -s "$oned/macOS/Documents" "$HOME/Documents"
+  ln -s "$oned/Downloads" "$HOME/Downloads"
+  ln -s "$oned/Pictures/Snagit" "$HOME/Pictures/."
+  ln -s "$oned/Pictures/Wallpaper" "$HOME/Pictures/."
+  ln -s "$oned/Pictures/Camera Roll" "$HOME/Pictures/."
+fi
 
 # Function that does the symbolic links
 link() {
