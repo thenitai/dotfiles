@@ -29,6 +29,7 @@ brew tap mongodb/brew
 brew install mongodb-community@4.2
 brew install fzy
 brew install mas
+brew install mackup
 
 # Install NVM
 echo 'Installing NVM...'
@@ -160,6 +161,8 @@ if [[ -d "$oned" ]]; then
   ln -s "$oned/Pictures/Snagit" "$HOME/Pictures/Snagit"
   ln -s "$oned/Pictures/Wallpaper" "$HOME/Pictures/Wallpaper"
   ln -s "$oned/Pictures/Camera Roll" "$HOME/Pictures/Camera Roll"
+  # Mackup
+  cp -pr "$oned/Mackup/.mackup.cfg" "$HOME/."
 fi
 
 # All done. Switch shell
