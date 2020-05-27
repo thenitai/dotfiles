@@ -152,11 +152,14 @@ oned="$HOME/OneDrive"
 if [[ -d "$oned" ]]; then
   sudo rm -rf "$HOME/Documents"
   sudo rm -rf "$HOME/Downloads"
-  link "$oned/macOS/Documents" "$HOME/Documents"
-  link "$oned/Downloads" "$HOME/Downloads"
-  link "$oned/Pictures/Snagit" "$HOME/Pictures/Snagit"
-  link "$oned/Pictures/Wallpaper" "$HOME/Pictures/Wallpaper"
-  link "$oned/Pictures/Camera Roll" "$HOME/Pictures/Camera Roll"
+  sudo rm -rf "$HOME/Pictures/Snagit"
+  sudo rm -rf "$HOME/Pictures/Wallpaper"
+  sudo rm -rf "$HOME/Pictures/Camera Roll"
+  ln -s "$oned/macOS/Documents" "$HOME/Documents"
+  ln -s "$oned/Downloads" "$HOME/Downloads"
+  ln -s "$oned/Pictures/Snagit" "$HOME/Pictures/Snagit"
+  ln -s "$oned/Pictures/Wallpaper" "$HOME/Pictures/Wallpaper"
+  ln -s "$oned/Pictures/Camera Roll" "$HOME/Pictures/Camera Roll"
 fi
 
 # All done. Switch shell
