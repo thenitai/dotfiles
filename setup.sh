@@ -140,25 +140,23 @@ git clone https://github.com/powerline/fonts.git --depth=1
 # Need to append fish shell to default shells
 sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
 
-linuxstuff = "$HOME/repos/linux-stuff"
+linuxstuff="$HOME/repos/linux-stuff"
 if [[ -d "$linuxstuff" ]]; then
   mkdir -p "$HOME/.ssh"
-  rm -f "$HOME/.ssh/id_rsa*"
-  rm -f "$HOME/.config/fish/config.fish"
-  ln -s "$linuxstuff/id_rsa" "$HOME/.ssh/id_rsa"
-  ln -s "$linuxstuff/id_rsa.pub" "$HOME/.ssh/id_rsa.pub"
-  ln -s "$linuxstuff/macos_config.fish" "$HOME/.config/fish/config.fish"
+  link "$linuxstuff/id_rsa" "$HOME/.ssh/id_rsa"
+  link "$linuxstuff/id_rsa.pub" "$HOME/.ssh/id_rsa.pub"
+  link "$linuxstuff/macos_config.fish" "$HOME/.config/fish/config.fish"
 fi
 
-oned = "$HOME/OneDrive"
+oned="$HOME/OneDrive"
 if [[ -d "$oned" ]]; then
   sudo rm -rf "$HOME/Documents"
   sudo rm -rf "$HOME/Downloads"
-  ln -s "$oned/macOS/Documents" "$HOME/Documents"
-  ln -s "$oned/Downloads" "$HOME/Downloads"
-  ln -s "$oned/Pictures/Snagit" "$HOME/Pictures/."
-  ln -s "$oned/Pictures/Wallpaper" "$HOME/Pictures/."
-  ln -s "$oned/Pictures/Camera Roll" "$HOME/Pictures/."
+  link "$oned/macOS/Documents" "$HOME/Documents"
+  link "$oned/Downloads" "$HOME/Downloads"
+  link "$oned/Pictures/Snagit" "$HOME/Pictures/."
+  link "$oned/Pictures/Wallpaper" "$HOME/Pictures/."
+  link "$oned/Pictures/Camera Roll" "$HOME/Pictures/."
 fi
 
 # All done. Switch shell
@@ -177,6 +175,10 @@ fish <<'END_FISH'
   # Bass
   omf install bass
 END_FISH
+
+echo '============================================='
+echo 'Script is done. Keep on :)'
+echo '============================================='
 
 # Function that does the symbolic links
 link() {
