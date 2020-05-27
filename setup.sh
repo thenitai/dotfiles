@@ -154,9 +154,9 @@ if [[ -d "$oned" ]]; then
   sudo rm -rf "$HOME/Downloads"
   link "$oned/macOS/Documents" "$HOME/Documents"
   link "$oned/Downloads" "$HOME/Downloads"
-  link "$oned/Pictures/Snagit" "$HOME/Pictures/."
-  link "$oned/Pictures/Wallpaper" "$HOME/Pictures/."
-  link "$oned/Pictures/Camera Roll" "$HOME/Pictures/."
+  link "$oned/Pictures/Snagit" "$HOME/Pictures/Snagit"
+  link "$oned/Pictures/Wallpaper" "$HOME/Pictures/Wallpaper"
+  link "$oned/Pictures/Camera Roll" "$HOME/Pictures/Camera Roll"
 fi
 
 # All done. Switch shell
@@ -185,6 +185,6 @@ link() {
   from="$1"
   to="$2"
   echo "Linking '$from' to '$to'"
-  rm -f "$to"
+  rm -rf "$to"
   ln -s "$from" "$to"
 }
