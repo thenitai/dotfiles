@@ -107,7 +107,8 @@ brew cask install postman
 #brew cask install whatsapp
 brew cask install zoomus
 brew cask install simplenote
-
+brew cask install choosy
+brew cask install authy
 
 echo 'Install apps from the App Store...'
 # Trello
