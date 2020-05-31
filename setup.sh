@@ -2,12 +2,12 @@
 
 dotfiles="$HOME/dotfiles"
 
-if [[ -d "$dotfiles" ]]; then
-  echo "Configuring it all for you"
-else
-  echo "The scripts don't seem to exist. Aborting..."
-  exit 1
-fi
+# if [[ -d "$dotfiles" ]]; then
+#   echo "Configuring it all for you"
+# else
+#   echo "The scripts don't seem to exist. Aborting..."
+#   exit 1
+# fi
 
 # Run xcode-select --install
 xcode-select --install
@@ -37,6 +37,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
 echo 'Installing Node...'
 nvm install 12
+
+npm i -g nodemon
+npm i -g grunt
 
 # Installing ZSH
 # echo 'Installing ZSH Shell...'
@@ -109,6 +112,8 @@ brew cask install zoomus
 brew cask install simplenote
 brew cask install choosy
 brew cask install authy
+brew cask install basecamp
+brew cask install appcleaner
 
 echo 'Install apps from the App Store...'
 # Trello
@@ -148,6 +153,8 @@ if [[ -d "$linuxstuff" ]]; then
   link "$linuxstuff/id_rsa" "$HOME/.ssh/id_rsa"
   link "$linuxstuff/id_rsa.pub" "$HOME/.ssh/id_rsa.pub"
   link "$linuxstuff/macos_config.fish" "$HOME/.config/fish/config.fish"
+  link "$linuxstuff/gitignore" "$HOME/.gitignore"
+  git config --global core.excludesfile $HOME/.gitignore
 fi
 
 oned="$HOME/OneDrive"
