@@ -20,10 +20,10 @@ if [[ $? != 0 ]]; then
 fi
 
 brew update
-brew install git htop mysql python selenium-server-standalone elasticsearch ghostscript libtiff exiftool MP4Box ufraw dcraw redis memcached tomcat-native
+brew install git htop mysql python selenium-server-standalone ghostscript libtiff exiftool MP4Box ufraw dcraw redis memcached tomcat-native
 brew install imagemagick@6
 brew install ffmpeg --with-libvorbis --with-libvpx --use-gcc  --with-libx264 --with-flac --with-theorao
-# brew tap homebrew/cask-cask
+brew tap homebrew/cask-cask
 brew install homebrew/cask-versions/java11
 brew tap mongodb/brew
 brew install mongodb-community@4.2
@@ -37,6 +37,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
 echo 'Installing Node...'
 nvm install 12
+# Required for sublime text to pickup node
+nvm alias default node
 
 npm i -g nodemon
 npm i -g grunt
@@ -115,6 +117,14 @@ brew cask install authy
 brew cask install basecamp
 brew cask install appcleaner
 
+brew tap danielbayley/alfred
+brew cask install alfred-theme-simple
+
+# ElasticSearch
+brew cask install adoptopenjdk8
+brew cask install adoptopenjdk11
+brew install elasticSearch@6.8
+
 echo 'Install apps from the App Store...'
 # Trello
 mas install 1278508951
@@ -189,6 +199,9 @@ fish <<'END_FISH'
   # Bass
   omf install bass
 END_FISH
+
+# Set path
+# echo 'set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths' >> ~/.config/fish/config.fish
 
 echo '============================================='
 echo 'Script is done. Keep on :)'
